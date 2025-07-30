@@ -1,0 +1,68 @@
+# BERTopic 분석을 위한 필수 라이브러리 (TensorFlow 없이 PyTorch 기반)
+# 2025년 1월 최신 안정 버전 기준
+
+# 기본 데이터 처리 및 분석
+pandas>=1.5.0
+numpy>=1.21.0
+
+# 시각화
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0             # BERTopic 시각화용
+kaleido>=0.2.1           # plotly 정적 이미지 생성용
+
+# PyTorch 기반 딥러닝 (CPU 버전)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 자연어 처리 및 토픽 모델링 (PyTorch 기반)
+transformers>=4.20.0
+sentence-transformers>=2.2.0
+bertopic>=0.15.0
+huggingface-hub>=0.10.0
+
+# 토픽 모델링 지원 라이브러리
+gensim>=4.2.0            # Coherence 계산용 (선택사항)
+scikit-learn>=1.1.0      # 기본 머신러닝 알고리즘
+
+# 클러스터링 및 차원 축소
+umap-learn>=0.5.3
+hdbscan>=0.8.29
+
+# 한국어 자연어 처리
+kiwipiepy>=0.15.0        # Java 불필요, 권장
+soynlp>=0.0.493         # 대안 한국어 처리 라이브러리
+
+# Excel 파일 처리
+openpyxl>=3.0.10
+xlrd>=2.0.1
+
+# 진행률 표시 및 유틸리티
+tqdm>=4.64.0
+regex>=2022.7.0
+python-dateutil>=2.8.2
+
+# 성능 최적화 (선택사항)
+numba>=0.56.0
+joblib>=1.1.0
+
+# 워드클라우드 생성 (선택사항)
+wordcloud>=1.9.0
+
+# 웹 스크래핑 관련 (크롤링 데이터 사용 시)
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# 호환성 개선
+typing-extensions>=4.0.0; python_version < "3.8"
+
+# 주의사항:
+# 1. TensorFlow는 의도적으로 제외 (DLL 충돌 문제 방지)
+# 2. GPU 사용 시 torch와 torchvision을 CUDA 버전으로 설치
+# 3. conda 환경 사용 권장
+# 
+# GPU 사용시 설치 명령어:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# CPU 전용 설치 명령어:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
